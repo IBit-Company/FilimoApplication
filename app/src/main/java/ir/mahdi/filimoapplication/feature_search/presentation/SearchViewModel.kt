@@ -4,6 +4,7 @@ import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import dagger.hilt.android.lifecycle.HiltViewModel
 import ir.mahdi.filimoapplication.core.util.Resource
 import ir.mahdi.filimoapplication.feature_search.domain.use_case.SearchMovie
 import kotlinx.coroutines.Dispatchers
@@ -13,8 +14,10 @@ import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class SearchViewModel constructor(
+@HiltViewModel
+class SearchViewModel @Inject constructor(
     private val searchMovie: SearchMovie
 ): ViewModel() {
 

@@ -26,6 +26,11 @@ object Dependencies {
         const val loggingJvm = "io.ktor:ktor-client-logging-jvm:${Versions.ktor}"
     }
 
+    object Hilt {
+        const val android = "com.google.dagger:hilt-android:${Versions.daggerHilt}"
+        const val compiler = "com.google.dagger:hilt-compiler:${Versions.daggerHilt}"
+    }
+
     object KotlinSerialization {
         const val kotlinSerialization = "org.jetbrains.kotlinx:kotlinx-serialization-json:${Versions.koltinSerialization}"
     }

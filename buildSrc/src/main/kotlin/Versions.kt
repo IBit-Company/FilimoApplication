@@ -13,4 +13,6 @@ object Versions {
 
     const val ktor = "1.5.0"
     const val koltinSerialization = "1.3.3"
+
+    const val daggerHilt = "2.42"
 }

@@ -86,4 +86,5 @@ dependencies {
     //Dagger-Hilt
     implementation(Dependencies.Hilt.android)
     kapt(Dependencies.Hilt.compiler)
+    implementation(Dependencies.Hilt.navigation)
 }

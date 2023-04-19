@@ -55,6 +55,6 @@ object HttpHelper {
         }
     }
 
-    val baseUrl = "https://www.filimo.com/api/en/v1"
+    val baseUrl = "https://www.filimo.com/api/en/v1/"
 
 }

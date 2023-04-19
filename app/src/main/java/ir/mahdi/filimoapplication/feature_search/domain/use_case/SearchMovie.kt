@@ -11,7 +11,7 @@ class SearchMovie(
 ) {
 
     operator fun invoke(query: String): Flow<Resource<List<Movie>>> {
-        if (query.isBlank() || query.length < 4)
+        if (query.isBlank())
             return flow {  }
 
         return repository.search(query)

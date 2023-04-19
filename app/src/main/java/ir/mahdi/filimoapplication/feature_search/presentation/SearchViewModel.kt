@@ -12,6 +12,7 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
+import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -25,7 +26,7 @@ class SearchViewModel @Inject constructor(
     val searchQuery = _searchQuery as State<String>
 
     private val _state = mutableStateOf(MovieSearchState())
-    val state = _state as State<MovieSearchState>
+    val state:State<MovieSearchState> = _state
 
     private val _eventFlow = MutableSharedFlow<UIEvent>()
     val eventFlow = _eventFlow.asSharedFlow()
@@ -57,14 +58,14 @@ class SearchViewModel @Inject constructor(
                             isLoading = false
                         )
 
-                        _eventFlow.emit(UIEvent.ShowSnackBar(it.message?: "there is an error"))
+                        _eventFlow.emit(UIEvent.ShowToast(it.message?: "there is an error"))
                     }
                 }
-            }
+            }.launchIn(this)
         }
     }
     sealed class UIEvent {
-        data class ShowSnackBar(val message: String): UIEvent()
+        data class ShowToast(val message: String): UIEvent()
     }
 }
 

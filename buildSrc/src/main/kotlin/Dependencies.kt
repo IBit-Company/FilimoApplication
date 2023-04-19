@@ -29,6 +29,7 @@ object Dependencies {
     object Hilt {
         const val android = "com.google.dagger:hilt-android:${Versions.daggerHilt}"
         const val compiler = "com.google.dagger:hilt-compiler:${Versions.daggerHilt}"
+        const val navigation = "androidx.hilt:hilt-navigation-compose:${Versions.hiltNavigation}"
     }
 
     object KotlinSerialization {

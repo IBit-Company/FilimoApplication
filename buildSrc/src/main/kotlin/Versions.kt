@@ -15,4 +15,5 @@ object Versions {
     const val koltinSerialization = "1.3.3"
 
     const val daggerHilt = "2.42"
+    const val hiltNavigation = "1.1.0-alpha01"
 }

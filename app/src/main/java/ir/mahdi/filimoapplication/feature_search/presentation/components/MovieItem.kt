@@ -89,6 +89,7 @@ fun MovieItem(
             modifier = Modifier.padding(bottom = 8.dp , start = 8.dp , end = 8.dp),
             text = description,
             overflow = TextOverflow.Ellipsis,
+            textAlign = TextAlign.End,
             maxLines = 2,
             )
     }

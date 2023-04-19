@@ -17,7 +17,7 @@ data class MovieListDto(
                 description = item.descr,
                 cover = item.pic.movie_img_m,
                 rate = item.imdb_rate,
-                duration = item.duration.text
+                duration = if (item.duration != null) item.duration.text else "نامشخص"
             ))
         }
 
@@ -30,7 +30,7 @@ data class Data(
     val HD: Boolean,
     val age_range: String,
     val audio: Audio,
-    val avg_rate_label: String,
+    val avg_rate_label: String?,
     val badge: Badge,
     val categories: List<Category>,
     val commingsoon_txt: String,
@@ -39,7 +39,7 @@ data class Data(
     val descr: String,
     val director: String?,
     val dubbed: Dubbed,
-    val duration: Duration,
+    val duration: Duration?,
     val freemium: Boolean,
     val id: String,
     val imdb_rate: String,
@@ -55,7 +55,7 @@ data class Data(
     val position: Int,
     val pro_year: String,
     val publish_date: String,
-    val rate_avrage: String,
+    val rate_avrage: String?,
     val rate_enable: Boolean,
     val rate_enable_by_cnt: Boolean,
     val rel_data: RelData,

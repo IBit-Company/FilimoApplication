@@ -27,6 +27,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import coil.compose.AsyncImage
 import ir.mahdi.filimoapplication.R
 
 @Composable
@@ -76,19 +77,19 @@ fun MovieItem(
                         .padding(top = 8.dp)
                 )
             }
-            Image(
+            AsyncImage(
                 modifier = Modifier
                     .width(120.dp)
                     .clip(RoundedCornerShape(16.dp)),
-                painter = painterResource(id = R.drawable.test_image),
-                contentDescription = "",
+                model = cover,
+                contentDescription = movieTitle,
             )
         }
 
         Text(
             modifier = Modifier.padding(bottom = 8.dp , start = 8.dp , end = 8.dp),
             text = description,
-            overflow = TextOverflow.Ellipsis,
+//            overflow = TextOverflow.Ellipsis,
             textAlign = TextAlign.End,
             maxLines = 2,
             )

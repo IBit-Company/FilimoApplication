@@ -35,4 +35,8 @@ object Dependencies {
     object KotlinSerialization {
         const val kotlinSerialization = "org.jetbrains.kotlinx:kotlinx-serialization-json:${Versions.koltinSerialization}"
     }
+
+    object Util {
+        const val coil = "io.coil-kt:coil-compose:${Versions.coin}"
+    }
 }

@@ -16,4 +16,6 @@ object Versions {
 
     const val daggerHilt = "2.42"
     const val hiltNavigation = "1.1.0-alpha01"
+
+    const val coin = "2.3.0"
 }

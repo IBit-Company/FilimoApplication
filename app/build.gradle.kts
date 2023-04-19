@@ -87,4 +87,7 @@ dependencies {
     implementation(Dependencies.Hilt.android)
     kapt(Dependencies.Hilt.compiler)
     implementation(Dependencies.Hilt.navigation)
+
+    //Coil
+    implementation(Dependencies.Util.coil)
 }
